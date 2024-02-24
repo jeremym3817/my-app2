@@ -1,4 +1,4 @@
-##Class Scheduler Project
+##Class Scheduler Project##
 
 #to run python scripts
 run "testenv/Scripts/Activate.ps1"
