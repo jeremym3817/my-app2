@@ -20,8 +20,8 @@ table = """ CREATE TABLE CLASSES(
 cur.execute(table)
 con.commit()
 
-#'2007-01-01 10:00:00'
-#yyyy-MM-dd HH:mm:ss
+#Example Date: '2007-01-01 10:00:00'
+#Time Format: yyyy-MM-dd HH:mm:ss
 cur.execute("""
     INSERT INTO CLASSES VALUES
     (0, "CS_2500", 'Intro to Software', 1, 214, "2021-01-01 08:30:00", "Dr.Steven Bar", 8.2),
@@ -35,6 +35,10 @@ for i in range(len(res.fetchall())):
     message = {
         f'{i}': res.fetchall()[i]
     }
+message = json.dumps(message)
+with open('data.json', 'w', encoding='utf-8') as f:
+  json.dump(message, f, ensure_ascii=False, indent=4)
+
 # print(message)
 # def createJSON()
 # data = [

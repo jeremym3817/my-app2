@@ -7,12 +7,12 @@ import java.sql.SQLException;
  *
  * @author sqlitetutorial.net
  */
-public class ConnectDB {
+public class DataConnect {
     /**
      * Connect to a sample database
      */
     public static void connect() {
-        ConnectDB conn = null;
+        DataConnect conn = null;
         try {
             // db parameters
             // String url = "jdbc:sqlite:C:/sqlite/db/chinook.db";
